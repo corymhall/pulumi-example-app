@@ -20,6 +20,7 @@ type LambdaHandlerArgs struct {
 func NewLambdaHandler(ctx *pulumi.Context, args LambdaHandlerArgs) (*LambdaHandler, error) {
 	lh := &LambdaHandler{}
 
+	// TODO: how to get the outputs and use in the lambda function?
 	_, err := local.Run(ctx, &local.RunArgs{
 		Dir: pulumi.StringRef("."),
 		Command: strings.Join([]string{
